@@ -1,6 +1,7 @@
 from re import L
 from lib.language import what_language
 from lib.delimiters import languageDemiliters
+from lib.insertion import Write_in_the_file
 
 def file_type(file):
     #determine the type of file
@@ -10,8 +11,16 @@ def file_type(file):
         quit()
     ext=file_decom[1]
     #print(what_language(ext))
-    comment=languageDemiliters[what_language(ext)]
-    #Write_in_the_file(file,comment)
+    key=what_language(ext)
+    if(key in languageDemiliters):
+        comment=languageDemiliters[key]
+        Write_in_the_file(file,comment)
+    else:
+        print("language not supported")
+    
+        
+    
+    
     
 
     
