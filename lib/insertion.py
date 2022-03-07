@@ -23,7 +23,7 @@ def affiche(matrice):
         print("")
 
 def open_json(file):
-    with open('user_config.json') as mon_fichier:
+    with open(file) as mon_fichier:
         user_config = json.load(mon_fichier)
     return(user_config) 
 
@@ -55,8 +55,26 @@ def Replaces(matrice,x,y,chaine):
         i=i+1
     return(matrice)
 
+def Existe_Header(file):
+    data=open_diagram(file)
+    print(len(data))
+    print(MATRICE_WIDTH)
+    if(len(data)<MATRICE_WIDTH):
+        return 0
+    else:
+        if(len(data[MATRICE_WIDTH-1])!=len(data[0])):
+            return 0
+            
+        print(data[MATRICE_WIDTH-1])
+
+def Update_Header(file):
+    pass
+
+def New_Header(file):
+    pass
+
 def Write_in_the_file(file,comment):
-    user_config=open_json(file)
+    user_config=open_json('user_config.json')
     diagram=open_diagram(user_config["diagram_choice"])
     #replace the user information in the matrix
     user_name=user_config["user_name"]
@@ -71,8 +89,17 @@ def Write_in_the_file(file,comment):
     diagram=Replaces(diagram,CREATEDAT_X,CREATEDAT_Y,create_date)
     diagram=Replaces(diagram,UPDATEDAT_X,UPDATEDAT_Y,create_date)
     
-    #print(diagram[UPDATEDBY_X][UPDATEDBY_Y+1])
+    if(len(comment[0])==1):
+        for loop in range(MATRICE_WIDTH):
+            diagram[loop][0]=comment[0]
+            diagram[loop][MATRICE_LENGTH-1]=comment[1]
+    else:
+        pass
     
     affiche(diagram)
-
-
+    
+    if(Existe_Header(file)):
+        Update_Header(file)
+    else:
+        New_Header(file)
+        

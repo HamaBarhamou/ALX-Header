@@ -3,10 +3,12 @@ def what_language(ext):
     """
     if(ext=='?'):
         return('c')
+    """
 
-    if(ext=='?'):
+    if(ext=='sh'):
         return('shellscript')
-    
+
+    """
     if(ext=='?'):
         return('coffeescript')
     
