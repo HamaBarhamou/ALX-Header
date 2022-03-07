@@ -28,5 +28,5 @@ $ ./ALX-Header.sh file_name.sh # file_name.c or file_name.py ....
 
 
 ## Expected result 
-</br>
+
 ![alt text](images/alxBarhamou.png)
