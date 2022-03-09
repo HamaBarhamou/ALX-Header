@@ -47,7 +47,9 @@ $ ./ALX-Header.sh file_name.sh # file_name.c or file_name.py ....
 
 ## Internal organization of code lines
 
-
+**lib:** Is a python library. It is in this folder that we will define all the functions we will need.</br></br>
+**ALX-Header.sh:** Is the entry point of the program. This bash script takes a **file** as argument and executes in the linux environment the python script **main.py** passing it the **file** as argument. </br></br>
+**main.py:**Is the entry point to the python code.
 
 
 **the writing of this document is in progress...**
