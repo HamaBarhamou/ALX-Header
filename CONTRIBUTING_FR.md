@@ -30,6 +30,6 @@ Apres avoir finit votre contribution et pousser votre travail sur la version for
 
 **main.py:** Est le point d'entrée au code python. Il se contente de tramsmettre l'argument **file** recuperer a la fonction  **file_type** de la bibliotheque **lib** dans le fichier **fileType.py**</br></br>
 
-**file_type:** Cette fonction determine en un premiers temps le language de programmation de **fichier** et ensuite appelle la fonction **Write_in_the_file(file,comment)** le language de programmtion est prix en charge par le projet. </br></br>
+**file_type:** Cette fonction determine en un premiers temps le language de programmation de **fichier** et ensuite appelle la fonction `Write_in_the_file(file,comment)` le language de programmtion est prix en charge par le projet. </br></br>
 
 `Write_in_the_file(file,comment)`: est une fonction dans le fichier insertion.py. Elle prend en paramettre deux arguments, le fichier: `file` et `comment`: un tableau deux dimensions qui contient les caractere pour commenter dans le fichier. Elle charge en memoire le fichier user_config.json et le diagramme de votre choix (le fichier diagram_ALX est charger pas defaut) respectivement dans les variable `user_config` et `diagram`.
