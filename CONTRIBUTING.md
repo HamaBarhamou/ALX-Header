@@ -9,7 +9,7 @@ If you want to start with open source, this project is for you.
 ## General Guidelines
 
 This page explains at a very low level how to contribute to ALX-Header. 
-Also make sure you know [Working with remote repositories] (https://git-scm.com/book/fr/v2/Les-bases-de-Git-Travailler-avec-des-d%C3%A9p%C3%B4ts-distants).
+Make sure you know [Working with remote repositories] (https://git-scm.com/book/fr/v2/Les-bases-de-Git-Travailler-avec-des-d%C3%A9p%C3%B4ts-distants).
 
 ## Submit a useful issue
 
