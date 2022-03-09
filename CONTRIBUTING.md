@@ -49,7 +49,10 @@ $ ./ALX-Header.sh file_name.sh # file_name.c or file_name.py ....
 
 **lib:** Is a python library. It is in this folder that we will define all the functions we will need.</br></br>
 **ALX-Header.sh:** Is the entry point of the program. This bash script takes a **file** as argument and executes in the linux environment the python script **main.py** passing it the **file** as argument. </br></br>
-**main.py:** Is the entry point to the python code.
+
+**main.py:** Est le point d'entrée au code python. Il se contente de tramsmettre l'argument **file** recuperer a la fonction **file_type** de la bibliotheque **lib** dans le fichier **fileType.py**</br></br>
+
+**file_type:** Cette fonction determine en un premiers temps le language de programmation de **fichier** et ensuite appelle la fonction **Write_in_the_file(file,comment)** le language de programmtion est prix en charge par le projet. </br></br>
 
 
 **the writing of this document is in progress...**
