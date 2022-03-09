@@ -1,3 +1,5 @@
+# <center>Open source project made by a beginner for beginners</center>
+
 # Contribute to ALX-Header
 
 :+1::tada: First of all, thank you for taking the time to contribute to ALX-Header! :tada::+1 : </br>
