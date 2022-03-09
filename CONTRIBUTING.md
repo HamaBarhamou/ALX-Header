@@ -22,13 +22,13 @@ Add to these report submissions error/traceback messages and requested environme
 First, navigate to the [ALX-Header](https://github.com/HamaBarhamou/ALX-Header) in your web browser and press the "Fork" button to make a personal copy of the repository on your own Github account.
 Then, click the "Clone or Download" button on your repository, copy the link and run the following on the command line to clone the repository:
 
-``bash
+```bash
 $ git clone <LINK-TO-YOUR-REPO>
 ```
 
 Finally, set the upstream remote to the official ALX-Header repository with:
 
-``bash
+```bash
 $ git remote add upstream https://github.com/HamaBarhamou/ALX-Header
 ```
 [Read more here ](https://www.neonscience.org/resources/learning-hub/tutorials/git-setup-remote)
