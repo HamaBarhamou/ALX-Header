@@ -26,4 +26,5 @@ Apres avoir finit votre contribution et pousser votre travail sur la version for
 
 ```
 ALX-Header.sh:
-``` est le point d'entrée du programme. Ce script bash prend un *fichier* comme argument et execute dans l'environement linux le scrpt *main.py*  en passant *fichier* comme argument au script python *main.py*
+``` 
+est le point d'entrée du programme. Ce script bash prend un *fichier* comme argument et execute dans l'environement linux le scrpt *main.py*  en passant *fichier* comme argument au script python *main.py*
