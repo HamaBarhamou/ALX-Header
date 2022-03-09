@@ -1,6 +1,7 @@
 # Contribute to ALX-Header
 
 :+1::tada: First of all, thank you for taking the time to contribute to ALX-Header! :tada::+1 :
+If you want to start with open source, this project is for you.
 
 
 ## General Guidelines
