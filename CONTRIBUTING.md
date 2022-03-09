@@ -1,6 +1,6 @@
 # Contribute to ALX-Header
 
-:+1::tada: First of all, thank you for taking the time to contribute to ALX-Header! :tada::+1 :
+:+1::tada: First of all, thank you for taking the time to contribute to ALX-Header! :tada::+1 : </br>
 If you want to start with open source, this project is for you.
 
 
@@ -42,5 +42,9 @@ $ cd ALX-Header
 $ ./ALX-Header.sh file_name.sh # file_name.c or file_name.py ....
 
 ```
+
+## Internal organization of code lines
+
+
 
 the writing of this document is in progress...
