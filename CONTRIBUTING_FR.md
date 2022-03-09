@@ -25,4 +25,4 @@ Apres avoir finit votre contribution et pousser votre travail sur la version for
 ### LE CODE
 
 **ALX-Header.sh:**
-est le point d'entrée du programme. Ce script bash prend un **fichier** comme argument et execute dans l'environement linux le scrpt **main.py**  en passant le **fichier** au script python **main.py**
+est le point d'entrée du programme. Ce script bash prend un **fichier** comme argument et execute dans l'environement linux le script python **main.py**  en lui passant comme argument le **fichier**
