@@ -50,9 +50,10 @@ $ ./ALX-Header.sh file_name.sh # file_name.c or file_name.py ....
 **lib:** Is a python library. It is in this folder that we will define all the functions we will need.</br></br>
 **ALX-Header.sh:** Is the entry point of the program. This bash script takes a **file** as argument and executes in the linux environment the python script **main.py** passing it the **file** as argument. </br></br>
 
-**main.py:** Is the entry point to the python code. It just tramsmit the argument **file** recover to function **file_type** of the library **lib** in the file **fileType.py**</br></br>
+**main.py:** Is the entry point to the python code. It just tramsmit the argument `file` recover to function `file_type` of the library **lib** in the file **fileType.py**</br></br>
 
-**file_type:** This function determines at first the programming language of **fichier** and then call the function **Write_in_the_file(file,comment)** the programming language is supported by the project. </br></br>
+`file_type`: This function determines at first the programming language of **fichier** and then call the function `Write_in_the_file(file,comment)` the programming language is supported by the project. </br></br>
 
+`Write_in_the_file(file,comment)`: is a function in the file insertion.py. It takes as parameters two arguments, the file: `file` et `comment`: a two-dimensional array that contains the characters for commenting in the file. It loads in memory the user_config.json file and the diagram of your choice (the diagram_ALX file is loaded by default) respectively in the `user_config` and `diagram`.
 
 **the writing of this document is in progress...**
