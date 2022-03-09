@@ -16,7 +16,7 @@ def file_type(file):
         comment=languageDemiliters[key]
         Write_in_the_file(file,comment)
     else:
-        print("language not supported")
+        print("language not supported") 
     
         
     
