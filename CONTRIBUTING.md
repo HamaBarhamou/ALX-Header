@@ -32,3 +32,12 @@ Finally, set the upstream remote to the official ALX-Header repository with:
 $ git remote add upstream https://github.com/HamaBarhamou/ALX-Header
 ```
 [Read more here ](https://www.neonscience.org/resources/learning-hub/tutorials/git-setup-remote)
+
+### Run ALX-Header
+
+To run ALX-Header directly from your clone
+```
+$ cd ALX-Header
+./ALX-Header.sh file_name.sh # file_name.c or file_name.py ....
+
+```
