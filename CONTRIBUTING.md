@@ -38,8 +38,6 @@ $ git remote add upstream https://github.com/HamaBarhamou/ALX-Header
 To run ALX-Header directly from your clone
 ```bash
 $ cd ALX-Header
-```
-```bash
 $ ./ALX-Header.sh file_name.sh # file_name.c or file_name.py ....
 
 ```
