@@ -30,3 +30,5 @@ $ ./ALX-Header.sh file_name.sh # file_name.c or file_name.py ....
 ## Expected result 
 
 ![alt text](images/alxBarhamou.png)
+
+![To contribute to the project](CONTRIBUTING.md)
