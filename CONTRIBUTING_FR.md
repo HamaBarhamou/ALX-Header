@@ -24,5 +24,6 @@ Apres avoir finit votre contribution et pousser votre travail sur la version for
 
 ### LE CODE
 
-**ALX-Header.sh:**
-est le point d'entrée du programme. Ce script bash prend un **fichier** comme argument et execute dans l'environement linux le script python **main.py**  en lui passant **fichier** comme argument.
+**lib:** Est une un bibliotheque python. C'est dans ce dossier que nous allons definir tout les fonction dont nous aurons besoins.
+**ALX-Header.sh:** Est le point d'entrée du programme. Ce script bash prend un **fichier** comme argument et execute dans l'environement linux le script python **main.py**  en lui passant le **fichier** comme argument. </br>
+**main.py:** Est le point d'entrée au code python.
