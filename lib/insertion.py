@@ -1,5 +1,8 @@
+import imp
 import json
 from datetime import datetime
+from lib.updateHeader import Update_Header
+from lib.newHeader import New_Header
 
 MATRICE_LENGTH=80
 MATRICE_WIDTH=11
@@ -67,16 +70,9 @@ def Existe_Header(file):
             
         print(data[MATRICE_WIDTH-1])
 
-def Update_Header(file):
-    # your code
-    pass
-
-def New_Header(file):
-    # your code 
-    pass
 
 def Write_in_the_file(file,comment):
-    print("comment:",comment)
+    #print("comment:",comment)
     user_config=open_json('user_config.json')
     diagram=open_diagram(user_config["diagram_choice"])
     #replace the user information in the matrix

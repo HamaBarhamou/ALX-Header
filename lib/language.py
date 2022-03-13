@@ -1,9 +1,9 @@
 
 def what_language(ext):
-    """
-    if(ext=='?'):
+    
+    if(ext=='c'):
         return('c')
-    """
+    
 
     if(ext=='sh'):
         return('shellscript')
