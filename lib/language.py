@@ -41,10 +41,10 @@ def what_language(ext):
     
     if(ext=='?'):
         return('java')
-    
-    if(ext=='?'):
+    """
+    if(ext=='js'):
         return('javascript')
-    
+    """
     if(ext=='?'):
         return('javascriptreact')
     
