@@ -13,6 +13,7 @@ Try to understand the project by yourself the time for me to write the **contrib
 ***
 A little intro about the installation.
 ```
+sudo apt-get install inotify-tools
 $ git clone https://github.com/HamaBarhamou/ALX-Header.git
 
 ```
@@ -32,3 +33,4 @@ $ ./ALX-Header.sh file_name.sh # file_name.c or file_name.py ....
 ![alt text](images/alxBarhamou.png)
 
 ![To contribute to the project](CONTRIBUTING.md)
+
