@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Variables
+install_dir="/usr/local/bin"
+project_dir="$(pwd)"
+bin_name="header"
+
+# Vérifier si le programme est déjà installé
+if [ -f "$install_dir/$bin_name" ]; then
+    echo "ALX-Header est déjà installé dans $install_dir."
+    echo "Abandon de l'installation."
+    exit 1
+fi
+
+# Créer un lien symbolique pour le programme exécutable
+sudo ln -sf "$project_dir/$bin_name" "$install_dir"
+sudo ln -sf /home/barhamou/github-projet/ALX-Header/lib /usr/local/bin/lib
+sudo ln -sf /home/barhamou/github-projet/ALX-Header /usr/local/bin/
+sudo ln -sf /home/barhamou/github-projet/ALX-Header/user_config.json /usr/local/bin/
+sudo ln -sf /home/barhamou/github-projet/ALX-Header/dia* /usr/local/bin/
+
+# Copier le fichier de configuration utilisateur dans /usr/local/bin/lib/
+sudo cp "$project_dir/user_config.json" "$install_dir"
+
+# Copier main.py dans /usr/local/bin
+sudo cp "$project_dir/main.py" "$install_dir"
+
+echo "ALX-Header a été installé avec succès dans $install_dir."

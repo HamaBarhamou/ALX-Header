@@ -1,4 +1,4 @@
-import imp
+import os
 import json
 from datetime import datetime
 #from lib.updateHeader import Update_Header
@@ -41,7 +41,10 @@ def affiche(matrice):
         print("")
 
 def open_json(file):
-    with open(file) as mon_fichier:
+    #with open(file) as mon_fichier:
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), file)
+    with open(config_path) as mon_fichier:
+
         user_config = json.load(mon_fichier)
     return(user_config) 
 

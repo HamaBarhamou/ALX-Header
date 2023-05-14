@@ -23,7 +23,7 @@ fill in the ```user_name``` and ```user_email``` fields in the ```user_config.js
 
 ```
 $ cd ALX-Header
-$ ./ALX-Header.sh file_name.sh # file_name.c or file_name.py ....
+$ ./header file_name.sh # file_name.c or file_name.py ....
 
 ```
 

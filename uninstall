@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Supprimer le lien symbolique
+sudo rm /usr/local/bin/header
+sudo rm /usr/local/bin/user_config.json
+sudo rm /usr/local/bin/ALX-Header 
+
+# Supprimer le fichier de configuration
+sudo rm /etc/user_config.json
+
+# Supprimer le dossier du programme
+sudo rm -rf /usr/local/ALX-Header
+
+
+echo "ALX-Header a été désinstallé avec succès !"
