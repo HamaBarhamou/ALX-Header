@@ -73,24 +73,40 @@ def Replaces(matrice,x,y,chaine):
         i=i+1
     return(matrice)
 
+def open_MATRICE_WIDTH_diagram(file):
+    with open(file, 'r') as f:
+        lines = f.readlines()
+        return [line.strip() for line in lines[:MATRICE_WIDTH]]
+
+
 def Existe_Header(file):
-    data=open_diagram(file)
-    #print(len(data))
-    #print(MATRICE_WIDTH)
-    if(len(data)<MATRICE_WIDTH):
-        return 0
-    else:
-        if(len(data[MATRICE_WIDTH-1])!=len(data[0])):
-            return 0
-            
-        #print(data[MATRICE_WIDTH-1])
+    user_config=open_json('user_config.json')
+    user_name=user_config["user_name"]
+    data = open_MATRICE_WIDTH_diagram(file)
+    if len(data) < MATRICE_WIDTH:
+        return False
+    elif (len(data[0])-2) != MATRICE_LENGTH:
+        return False
+    elif file not in data[FILENAME_X][FILENAME_Y:MATRICE_LENGTH-2]:
+        return False
+    elif user_name not in data[AUTHOR_X][AUTHOR_Y:MATRICE_LENGTH-2]:
+        return False
+    elif "Created" in data[CREATEDBY_X][CREATEDBY_Y:MATRICE_LENGTH-2]:
+        return False
+    elif "Updated" in data[UPDATEDBY_X][UPDATEDBY_Y:MATRICE_LENGTH-2]:
+        return False
+    elif "Created" in data[CREATEDAT_X][CREATEDAT_Y:MATRICE_LENGTH-2]:
+        return False
+    elif "Updated" in data[UPDATEDAT_X][UPDATEDAT_Y:MATRICE_LENGTH-2]:
+        return False
+    return True
+
+
 
 
 def Write_in_the_file(file,comment):
-    #print("comment:",comment)
     user_config=open_json('user_config.json')
     diagram=open_diagram(user_config["diagram_choice"])
-    #replace the user information in the matrix
     user_name=user_config["user_name"]
     user_email='<'+user_config["user_email"]+'>'
     create_date=str(datetime.now())
@@ -102,17 +118,15 @@ def Write_in_the_file(file,comment):
     diagram=Replaces(diagram,UPDATEDBY_X,UPDATEDBY_Y,user_name)
     diagram=Replaces(diagram,CREATEDAT_X,CREATEDAT_Y,create_date)
     diagram=Replaces(diagram,UPDATEDAT_X,UPDATEDAT_Y,create_date)
-
-    
+   
     for loop in range(MATRICE_WIDTH):
         diagram[loop][0]=comment[0]
         diagram[loop][MATRICE_LENGTH-1]=comment[1]
     
-    #affiche(diagram)
-    
-    if(Existe_Header(file)):
+    rep = Existe_Header(file)
+    if(rep == True):
         Update_Header(file)
     else:
         New_Header(file,diagram,MATRICE_WIDTH,MATRICE_LENGTH)
-        pass
+    print("rep", rep)
         
