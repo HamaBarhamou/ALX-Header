@@ -1,7 +1,7 @@
 import imp
 import json
 from datetime import datetime
-from lib.updateHeader import Update_Header
+#from lib.updateHeader import Update_Header
 #from lib.newHeader import New_Header
 
 MATRICE_LENGTH=77
@@ -102,6 +102,20 @@ def Existe_Header(file):
     return True
 
 
+def Update_Header(file, user_name, user_email):
+    data = open_diagram(file)
+    create_date = data[CREATEDAT_X][CREATEDAT_Y:]
+    updated_date = str(datetime.now())[:19]
+    updated_by = f"{user_name}<{user_email}>"
+    # Mettre à jour les informations de l'entête
+    data[AUTHOR_X][AUTHOR_Y:AUTHOR_Y+len(user_name)] = user_name
+    data[AUTHOR_X][AUTHOR_Y+len(user_name)+3:AUTHOR_Y+len(user_name)+3+len(user_email)] = user_email
+    data[UPDATEDAT_X][UPDATEDAT_Y:] = updated_date
+    data[UPDATEDBY_X][UPDATEDBY_Y:] = updated_by
+    # Écrire les données mises à jour dans le fichier
+    with open(file, 'w') as f:
+        for row in data:
+            f.write(''.join(row))
 
 
 def Write_in_the_file(file,comment):
@@ -125,8 +139,9 @@ def Write_in_the_file(file,comment):
     
     rep = Existe_Header(file)
     if(rep == True):
-        Update_Header(file)
+        #Update_Header(file, user_name, user_email)
+        pass
     else:
         New_Header(file,diagram,MATRICE_WIDTH,MATRICE_LENGTH)
-    print("rep", rep)
+        
         
